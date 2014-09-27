@@ -107,7 +107,7 @@ describe Shout do
 
 	before do
 		@shout = Shout.new
-		@shout.message = "Hallo ihr doofen Nüsse!"
+		@shout.message = "Hallo ihr doofen Nuesse"
 		@shout.time_created	
 		@shout.likes = 0
 	end
@@ -120,8 +120,7 @@ describe Shout do
 
 	describe :message do
 			it "should be a normal message" do
-				@shout.message = "Hallo ihr doofen Nüsse!"
-				@shout.valid?.should be_truthy
+				expect(@shout.message).to eq("Hallo ihr doofen Nuesse")	
 	  	end
 		end
 
